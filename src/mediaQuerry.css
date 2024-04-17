@@ -1,0 +1,116 @@
+:root{
+    --primary-text-color: #183b56;
+    --secondry-text-color: #577592;
+    --accent-color : #2294e3;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section : 20px;
+    --only-white : white;
+    --shadow: #989898;
+    --shadow2: #ffffff;  
+    --res-color: white;
+
+}
+.dark-theme{
+    --primary-text-color: #f1f4f7;
+    --secondry-text-color: #2682dd;
+    --bg-color : rgb(1, 33, 63);
+    --only-white: #2294e3;
+    --shadow: #292020;
+    --shadow2: black;
+    --res-color: rgb(1,33,63);
+  
+}
+
+@media  screen and (max-width: 992px) {
+    .nav-toggle{
+       display: block;
+        margin-right: 20px;
+        size: 50px;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: var(--res-color);
+        left: -100%;
+        top: 100%;
+        width: 100%;
+        padding-block: 20px;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+    }
+    .main-nav{
+        overflow: initial;
+    }
+    .nav-links.active{
+        left: 0;
+    }
+    .Firstcontent{
+        text-align: justify;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    
+}
+@media screen and  (max-width: 767px) {
+    .primary-button{
+        width: 100%;
+    }
+    .header-section{
+        flex-direction: column-reverse;
+    }
+    .header-left{
+        max-width: 100vw;
+        text-align: center;
+    }
+    .features-card{
+        min-width: calc(50% - 10px);
+
+    }
+    
+}
+@media screen and (max-width: 479px) {
+    :root{
+        --padding-inline-section: 10px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .features-card{
+        min-width: calc(50% - 10px);
+
+    }
+
+}
+@media screen and (max-width: 400px) {
+    :root{
+        --padding-inline-section: 8px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    p{
+        font-size: .8rem;
+    }
+    .features-card{
+        min-width: 100%;
+
+    }
+
+}
