@@ -7,8 +7,8 @@ function Login() {
     // const [username, setUsername] = useState('');
     // const [password, setPassword] = useState('');
     const [userData, setuserData] = useState({
-        email:" ",
-        password:" "
+        email:"",
+        password:""
     })
 
     const navigate = useNavigate()
@@ -18,8 +18,9 @@ function Login() {
         // Add login logic here
         // console.log(userData)
         try{
-            await account.createEmailPasswordSession(userData.email,userData.password);
-            navigate('/Courses')
+            
+            account.createEmailPasswordSession(userData.email, userData.password)
+            navigate('/')
         }
         catch{
             alert("something is wrong...")

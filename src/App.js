@@ -19,6 +19,7 @@ import { useState, useEffect } from 'react';
 import './mediaQuerry.css';
 import Login from './components/Login'
 import Signup from './components/Signup'
+// import { account } from './appwriteConfig';
 
 function App() {
   const [theme, settheme] = useState("light-theme");
@@ -60,6 +61,26 @@ function App() {
     document.body.className = theme;
   }, [theme]);
 
+//   const [isLoggedIn, setIsLoggedIn] = useState(null);
+//   const [isAuthChecked, setIsAuthChecked] = useState(false);
+
+//   useEffect(() => {
+//     // Initialize Appwrite
+
+//     // Check if user is logged in
+//     account.get().then(() => {
+//       setIsLoggedIn(true);
+//     }).catch(() => {
+//       setIsLoggedIn(false);
+//     })
+//       .finally(() => {
+//         setIsAuthChecked(true); // Mark authentication check as complete
+//       });
+//   }, []);
+
+//   if (!isAuthChecked) {
+//     return <div>Loading...</div>;
+// }
 
   return (
     <Router>
@@ -68,9 +89,9 @@ function App() {
 
         <Banner />
 
-        <Navbar toggleTheme={toggleTheme} 
-          changeText={changeText} 
-          menuToggle={menuToggle} 
+        <Navbar toggleTheme={toggleTheme}
+          changeText={changeText}
+          menuToggle={menuToggle}
           menu={menu} />
 
         <Routes>
@@ -79,19 +100,18 @@ function App() {
 
           <Route path="/Sign-up" element={<Signup />}></Route>
 
-          <Route path="/Login" element={<Login/>}></Route>
+          <Route path="/Login" element={<Login />}></Route>
 
 
-            <Route path='/Courses' element={<Courses />}></Route>
+          <Route path='/Courses' element={<Courses />}></Route>
 
-            
-            <Route path='/Courses/ReactCourses' element={<ReactCourses />}></Route>
+          <Route path='/Courses/ReactCourses' element={<ReactCourses />}></Route>
 
-            <Route path='/Courses/MernStack' element={<MernStack />}></Route>
+          <Route path='/Courses/MernStack' element={<MernStack />}></Route>
 
-            <Route path='/Courses/Dsacourses' element={<Dsacourses />}></Route>
+          <Route path='/Courses/Dsacourses' element={<Dsacourses />}></Route>
 
-            <Route path='/Courses/FrontEnd' element={<FrontEnd />}></Route>
+          <Route path='/Courses/FrontEnd' element={<FrontEnd />}></Route>
 
         </Routes>
 

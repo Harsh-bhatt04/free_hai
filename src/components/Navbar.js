@@ -1,7 +1,7 @@
 // import React, { Component } from 'react'
 import { Link , useNavigate} from 'react-router-dom'
 import logo from './img/logo.png'
-import { account } from '../appwriteConfig';
+import { account } from '../appwriteConfig'
 // import { Link, Navigate } from 'react-router-dom'
 // import free from './img/free.jpg'
 import { useState, useEffect } from 'react'
@@ -46,7 +46,7 @@ function Navbar(props) {
         .finally(() => {
             setIsAuthChecked(true); // Mark authentication check as complete
         });
-    }, [isLoggedIn]);
+    }, []);
 
     const handleLogout = () => {
         // Initialize Appwrite
@@ -74,26 +74,23 @@ function Navbar(props) {
                     <div className={`nav-links ${(props.menu === ' ' ? ' ' : 'active')}`}>
                         <ul className="flex">
                             <li><Link to="/" className="hover-link">Home</Link></li>
-                            <li><Link to="/courses" className="hover-link">Courses</Link></li>
+                            
                             <li><Link to="/About" className="hover-link">About</Link></li>
 
 
                             {isLoggedIn ? (
+                                <>
+                                <li><Link to="/courses" className="hover-link">Courses</Link></li>
                                 <li><Link to="/Logout" className="hover-link secondry-button" onClick={handleLogout}>Logout</Link></li>
+                                
+                                </>
                             ) : (
                                 <>
                                     {/* <li><Link to="/Sign-up" className="hover-link secondry-button">Signup</Link></li> */}
                                     <li><Link to="/Login" className="hover-link primary-button">Login</Link></li>
                                 </>
                             )}
-
-
-                            {/* {isAuthenticated && ( */}
-
-
-                            {/* {!isAuthenticated && ( */}
-
-
+                            
                             <li><Link className="hover-link primary-button" id="dark" onClick={props.toggleTheme}>Mode</Link></li>
                         </ul>
                     </div>
