@@ -21,7 +21,7 @@ function Motivefield() {
         .finally(() => {
             setIsAuthChecked(true); // Mark authentication check as complete
         });
-    }, [isLoggedIn]);
+    },);
 
     if (!isAuthChecked) {
         return <div>Loading...</div>;

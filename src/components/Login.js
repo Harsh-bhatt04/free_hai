@@ -21,6 +21,8 @@ function Login() {
             
             account.createEmailPasswordSession(userData.email, userData.password)
             navigate('/')
+            alert('Logged in Successfully...')
+
         }
         catch{
             alert("something is wrong...")
