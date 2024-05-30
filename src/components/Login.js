@@ -21,7 +21,9 @@ function Login() {
             
             account.createEmailPasswordSession(userData.email, userData.password)
             navigate('/')
-            alert('Logged in Successfully...')
+            var top = <p>Successfully Signed in...</p>;
+            alert({top})
+            // alert('Logged in Successfully...')
 
         }
         catch{

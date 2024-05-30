@@ -18,6 +18,8 @@ function Signup() {
             userData.password
         )
         signupPromise.then(function(res){
+            var top = <p>Successfully Signed in...</p>;
+            alert({top})
             navigate("/Login")
         },function(err){
             console.log(err)
